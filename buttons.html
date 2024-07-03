@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="C:\Users\t0103\OneDrive\바탕 화면\html\buton.css">
+    <link rel="stylesheet" href="button.css">
     <title>practice button</title>
   </head>
   <body>
@@ -10,15 +10,19 @@
     <p id="main">
       hello everyone im student in Soongsil Universery 1st.
       <button class="uber-button" onclick="alert('warning')">Request now</button>
-      <button class="uber-button" onclick="
-      if (document.querySelector('#main').style.backgroundColor='white' ){
-      document.querySelector('#main').style.backgroundColor='red';
-      document.querySelector('#main').style.color= 'white';}
-      else{
-      document.querySelector('#main').style.backgroundColor= 'white';
-      document.querySelector('#main').style.color='black';
-      }
-      "> reverse </button>
+      <button class="uber-button" onclick="toggleBackground()"> reverse </button>
+      <script>
+        function toggleBackground() {
+          var body = document.querySelector('body');
+          if (body.style.backgroundColor === '' || body.style.backgroundColor === 'white') {
+            body.style.backgroundColor = 'red';
+            body.style.color = 'white';
+          } else if (body.style.backgroundColor === 'red') {
+            body.style.backgroundColor = 'white';
+            body.style.color = 'black';
+          }
+        }
+      </script>
     </p>
 
     <button class="Amazon-button">Add to cart</button>
